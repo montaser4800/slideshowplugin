@@ -1,0 +1,47 @@
+.next{
+    width: 5%;
+    height: 5%;
+    padding-left: 10%;
+}
+
+.prev{
+    width: 5%;
+    height: 5%;
+    padding-right: 10%;
+}
+
+.slideshow_container{
+    width: 100%;
+
+    overflow:hidden;
+}
+
+.slideshow{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    float: left;
+    padding: 3px;
+}
+
+.slideshow img{
+    display: none;
+    width: 80%;
+    height: 80%;
+}
+.slideshow img.active{
+    display: block;
+}
+
+.prev, .next{
+    cursor: pointer;
+}
+
+.nav{
+    display: flex;
+    justify-content: center;
+}
+
