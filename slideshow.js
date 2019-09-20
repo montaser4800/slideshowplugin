@@ -28,7 +28,7 @@
 
                 if(nextImg.length){
                     currentImg.removeClass("active").hide();
-                    nextImg.addClass("active").fadeIn();
+                    nextImg.addClass("active").fadeIn(1500);
                 }
             });
 
@@ -38,8 +38,8 @@
                 let prevImg = currentImg.prev();
 
                 if(prevImg.length){
-                    currentImg.removeClass("active");
-                    prevImg.addClass("active");
+                    currentImg.removeClass("active").hide();
+                    prevImg.addClass("active").fadeIn(1500);
                 }
 
             });
