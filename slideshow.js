@@ -7,9 +7,10 @@
         // Options
         // Sætter default options, hvis der ikke sendes noget med
         const defaultOptions = {
-            font:{
-                txtsize: '100px'
+            nav:{
+                arrows: "block"
             }
+
         };
 
         const opts = $.extend(true, {}, defaultOptions, options);
@@ -40,6 +41,7 @@
                     currentImg.removeClass("active");
                     prevImg.addClass("active");
                 }
+
             });
 
 
