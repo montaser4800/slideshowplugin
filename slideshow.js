@@ -9,7 +9,10 @@
         const defaultOptions = {
             nav:{
                 arrows: "block"
-            }
+            },
+            fadeAnimation:{
+                fadeInSpeed: 1000
+            },
 
         };
 
@@ -28,7 +31,7 @@
 
                 if(nextImg.length){
                     currentImg.removeClass("active").hide();
-                    nextImg.addClass("active").fadeIn(1500);
+                    nextImg.addClass("active").fadeIn(opts.fadeAnimation.fadeInSpeed);
                 }
             });
 
@@ -39,7 +42,7 @@
 
                 if(prevImg.length){
                     currentImg.removeClass("active").hide();
-                    prevImg.addClass("active").fadeIn(1500);
+                    prevImg.addClass("active").fadeIn();
                 }
 
             });
