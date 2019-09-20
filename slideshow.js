@@ -46,6 +46,7 @@
 
 
 
+            $(el).find(".next, .prev").css("display", opts.nav.arrows);
         });
 
     };
