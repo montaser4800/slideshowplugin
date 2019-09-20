@@ -33,7 +33,7 @@
     height: 80%;
 }
 .slideshow img.active{
-    display: block;
+    /*display: block;*/
 }
 
 .prev, .next{

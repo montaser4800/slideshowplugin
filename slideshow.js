@@ -7,7 +7,9 @@
         // Options
         // Sætter default options, hvis der ikke sendes noget med
         const defaultOptions = {
-
+            font:{
+                txtsize: '100px'
+            }
         };
 
         const opts = $.extend(true, {}, defaultOptions, options);
@@ -16,6 +18,7 @@
         return this.each(function (idx, el) {
 
             // Grundscriptede for slideshowet
+            $(".active").show();
 
             $(el).find(".next").click(function () {
 
@@ -23,8 +26,8 @@
                 let nextImg = currentImg.next();
 
                 if(nextImg.length){
-                    currentImg.removeClass("active");
-                    nextImg.addClass("active");
+                    currentImg.removeClass("active").hide();
+                    nextImg.addClass("active").fadeIn();
                 }
             });
 
@@ -38,6 +41,8 @@
                     prevImg.addClass("active");
                 }
             });
+
+
 
         });
 
