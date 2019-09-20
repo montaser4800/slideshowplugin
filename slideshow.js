@@ -25,7 +25,7 @@
             // Grundscriptede for slideshowet
             $(".active").show();
 
-            setInterval(function () {
+            function slideAutoplay() {
                 let currentImg = $(".active");
                 let nextImg = currentImg.next();
 
@@ -33,7 +33,17 @@
                     currentImg.removeClass("active").hide();
                     nextImg.addClass("active").fadeIn(opts.fadeAnimation.fadeInSpeed);
                 }
-            }, opts.autoplaySpeed);
+            };
+
+
+            let autoplay = setInterval(slideAutoplay, opts.autoplaySpeed);
+
+            $(el).hover(
+                function () {
+                clearInterval(autoplay);
+            }, function () {
+                setInterval(slideAutoplay, opts.autoplaySpeed)
+            });
 
             $(el).find(".next").click(function () {
 
