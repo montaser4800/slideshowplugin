@@ -7,6 +7,9 @@
         // Options
         // Sætter default options, hvis der ikke sendes noget med
         const defaultOptions = {
+            nav:{
+                arrows: "block"
+            }
 
         };
 
@@ -37,8 +40,10 @@
                     currentImg.removeClass("active");
                     prevImg.addClass("active");
                 }
+
             });
 
+            $(el).find(".next, .prev").css("display", opts.nav.arrows);
         });
 
     };
