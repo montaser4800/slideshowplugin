@@ -29,8 +29,8 @@
     </div>
 
     <div class="nav">
-        <img class="prev" alt="Prev" src="css/images/pil1.png">
-        <img class="next" alt="Next" src="css/images/pil2.png">
+        <div class="prev" alt="Prev" ></div>
+        <div class="next" alt="Next"></div>
     </div>
 </div>
 
@@ -40,10 +40,20 @@
 
 <script>
     $(document).ready(function() {
-
+/*
+arrows = "block" / "none" , med det kan du vælge om du vil have pile eller en med på slideshowet
+arrowColor = "red" / "blue" , med det kan du vælge hvilken farve pilende skal være.
+arrowSize = "15px" / "50px" , med det kan du vælge størrelse på pilende.
+ */
         $(".wrapper").slideshow({
             nav: {
-                arrows: "none"
+                arrows: "",
+                arrowColor: "",
+                arrowSize: ""
+            },
+
+            fadeAnimation:{
+
             }
 
         });

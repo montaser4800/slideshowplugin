@@ -1,18 +1,24 @@
 .next{
-    width: 5%;
-    height: 5%;
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid;
     padding-left: 10%;
 }
 
 .prev{
-    width: 5%;
-    height: 5%;
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right:15px solid;
     padding-right: 10%;
+
 }
 
 .slideshow_container{
     width: 100%;
-
     overflow:hidden;
 }
 
@@ -42,6 +48,6 @@
 
 .nav{
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 

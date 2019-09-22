@@ -8,7 +8,13 @@
         // Sætter default options, hvis der ikke sendes noget med
         const defaultOptions = {
             nav:{
-                arrows: "block"
+                arrows: "block",
+                arrowColor: "red",
+                arrowSize: "15px"
+            },
+
+            fadeAnimation:{
+             fadeInSpeed: 1500
             }
 
         };
@@ -28,7 +34,7 @@
 
                 if(nextImg.length){
                     currentImg.removeClass("active").hide();
-                    nextImg.addClass("active").fadeIn(1500);
+                    nextImg.addClass("active").fadeIn(opts.fadeAnimation.fadeInSpeed);
                 }
             });
 
@@ -39,14 +45,26 @@
 
                 if(prevImg.length){
                     currentImg.removeClass("active").hide();
-                    prevImg.addClass("active").fadeIn(1500);
+                    prevImg.addClass("active").fadeIn(opts.fadeAnimation.fadeInSpeed);
                 }
 
             });
 
-
-
             $(el).find(".next, .prev").css("display", opts.nav.arrows);
+
+            $(el).find(".next").css("color", opts.nav.arrowColor);
+            $(el).find(".prev").css("color", opts.nav.arrowColor);
+
+            $(el).find(".next").css({
+                "border-top-width" : opts.nav.arrowSize,
+                "border-bottom-width" : opts.nav.arrowSize,
+                "border-left-width" : opts.nav.arrowSize
+            });
+            $(el).find(".prev").css({
+                "border-top-width" : opts.nav.arrowSize,
+                "border-bottom-width" : opts.nav.arrowSize,
+                "border-right-width" : opts.nav.arrowSize
+            });
         });
 
     };
