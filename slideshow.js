@@ -15,7 +15,8 @@
 
             fadeAnimation:{
              fadeInSpeed: 1500
-            }
+            },
+            autoplaySpeed:1000
 
         };
 
@@ -26,6 +27,26 @@
 
             // Grundscriptede for slideshowet
             $(".active").show();
+
+            function slideAutoplay() {
+                let currentImg = $(".active");
+                let nextImg = currentImg.next();
+
+                if(nextImg.length){
+                    currentImg.removeClass("active").hide();
+                    nextImg.addClass("active").fadeIn(opts.fadeAnimation.fadeInSpeed);
+                }
+            };
+
+
+            let autoplay = setInterval(slideAutoplay, opts.autoplaySpeed);
+
+            $(el).hover(
+                function () {
+                clearInterval(autoplay);
+            }, function () {
+                setInterval(slideAutoplay, opts.autoplaySpeed)
+            });
 
             $(el).find(".next").click(function () {
 
